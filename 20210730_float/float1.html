@@ -8,7 +8,8 @@
     <style>
         *{margin: 0;padding:0}
         div.box{
-            width: 500px;height: 200px;
+            width: 500px;
+            /* height: 200px; */
             background: skyblue;
 
         }
@@ -22,10 +23,7 @@
             background-color: green;
             float:right
         }
-        div.box:after{
-            content: "";clear:both;display: block
-
-        }
+        .clearfix:after{content: "";clear:both;display: block}
 
 
     </style>

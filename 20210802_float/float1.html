@@ -8,23 +8,25 @@
     <style>
         *{margin: 0;padding: 0;}
         li{list-style: none;}
-        .clearfix:after{
-            content: "";clear:both; display: block;
+        .clearfix:after{ content: "";clear:both;display:block  }
+        
+        div.box{
+            margin: 0 auto;
+            width: 1000px;
+            background-color: skyblue;
+             /* margin-top: 10px; */
+            /* margin-left:auto
+            margin-right:auto */
         }
-        div.box{background-color: skyblue;
-        width: 1000px;
-        margin: 0 auto;
-        /* margin-top: 10px; */
-        /* margin-left:auto
-        margin-right:auto */
-        }
-
         /* div.box li{background-color: orange;} */
-        div.box>ul>li{background-color: orange;
-        float: left;
-        width: 200px;height: 40px;line-height: 40px;
+        div.box>ul>li{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
         text-align: center;
-    }
+        background-color:orange;
+        float: left;
+        }
 
     </style>
 </head>
@@ -38,7 +40,7 @@
             <li>menu5</li>
 
         </ul>
-        
+       
     </div>
 </body>
 </html>

@@ -6,56 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
+
 <style>
-    div.box{width: 400px;height: 600px;
+    div.box{width: 400px;height: 400px;
         background-color: skyblue;
-        margin: 0;auto;
-    position: relative;}
+        margin: 0 auto;   position: relative;}
 
     div.box>div{width: 100px;height: 100px;
         position: absolute;
-   
-    }   
+       }   
     div.box1{background-color: #f00;right: 0;top: 0;} 
     div.box2{background-color: #ff0;right: 0;bottom: 0;} 
     div.box3{background-color: #0ff;left: 0;bottom: 0;} 
     div.box4{background-color: #0f0;} 
 
 
-    /* div.tbox{
-        margin: 0 auto; width: 1000px;height: 200px;background-color: #ccc ; 
-        margin-top: 20px; position: relative;text-align: center;} */
-    
     div.tbox{
-        width: 1000px;height: 200px;
-        background-color: gray;
-        margin: 0 auto;margin-top: 20px;position: relative;text-align: center;
-    }
-        
+        margin: 0 auto; width: 1000px;height: 200px;
+        background-color: #ccc ; 
+        margin-top: 20px; text-align: center;
+        position: relative;}
+            
     div.tbox>div{position: absolute;line-height: 100px;}
         
-        div.tbox1{width: 300px;height: 100px;
+    div.tbox1{width: 300px;height: 100px;
             background-color: #f00; }
-        div.tbox2{width: 150px;height: 100px;
+    div.tbox2{width: 150px;height: 100px;
             background-color: #ff0; right: 0; }
-        div.tbox3{width: 100%;height: 40px;
+    div.tbox3{width: 100%;height: 40px;
             background-color: #0ff; bottom: 0; 
             line-height: 40px !important}
         
-    }
+    header#header{width: 1000px;height: 100px;background-color: skyblue;
+                    margin: 0 auto;
+                    margin-top:20px; position: relative;}
 
-    header#header{width: 1000px;height: 100px;background-color: #skyblue;
-                    margin: 0 auto;margin-top:20px; 
-                    position: relative;}
+    header#header>h1{
+        width: 100px;height: 100px;
+        background-color: orange;   }
 
-    header#header>h1{width: 100px;height: 100px;
-    background-color: orange;
-    }
-
-    header#header>hi>a{display: block;line-height: 100;text-align: center;
+    header#header>h1>a{display: block;line-height: 100px; text-align: center;
     }
     .util{width: 200px;height: 40px;
-        background-color: #f00; position: absolute;right: 0;top: 0;}
+        background-color: #f00; 
+        position: absolute;right: 0;top: 0;}
     
     .gnb{width: 600px;height: 50px;
         background-color: #ff0;
@@ -77,13 +71,13 @@
       <div class="box3">box3</div>
       <div class="box4">box4</div>
       
+    </div>
+
     <div class="tbox">
         <div class="tbox1">01</div>
         <div class="tbox2">02</div>
         <div class="tbox3">03</div>
-    </div>
-
-  </div>  
+    </div>  
 
     <header id="header">
         <h1><a href="#">logo</a></h1>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box1{
+            width: 100px;height: 100px;
+            background-color: #f00;
+            position: absolute;
+        /* 마진영오토 말고 가운데정렬 마레값은 원래너비의 반  */
+            left: 50%; margin-left: -50px;
+                }
+        .box2{
+            width: 100px;height: 100px;
+            background-color: #0ff;
+            position: absolute;
+            top: 50%;margin-top: -50px;
+
+        }
+        .box{
+            width: 400px;height: 400px;
+            background-color: #0f0;
+            /* position: absolute; */
+            position: relative; 
+                                /* poa랑 por비교하기 */
+            left: 50%;top: 50%;
+            margin-left: -200px;margin-top: -200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    <!-- .box입력 -->
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        
+</div>
+
+</body>
+</html>

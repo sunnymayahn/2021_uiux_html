@@ -1,0 +1,59 @@
+@charset "utf-8";
+body{font-family: 'Roboto', sans-serif;}
+/* 구글웹폰트 가져오로 바디에 링크카피해서 걸고 스타일에 바디폰트 패밀리 설정 */
+/* header */
+header#header{}
+header#header>div.topWrap{border-bottom: 1px solid #c4c4c4;}
+header#header>div.topWrap>div.top{
+    width: 980px;margin: 0 auto;background-color: #0ff; }
+
+nav.util{background-color: pink; float: right;}
+nav.util>ul{}
+nav.util>ul>li{float: left;}
+nav.util>ul>li>a{
+    display: block;text-align: center;line-height: 26px;
+    height: :26px; padding: 0 10px;color: #888 ; font-size: 14px;
+    position: relative;}
+
+nav.util>ul>li>a:after{
+        content: "";width: 1px;height: 10px;display: block;
+        background-color: #c4c4c4;
+        position: absolute;top: 7px;right: 0;}
+nav.util>ul>li:last-child>a:after{content: ""; display: none;}
+
+div.logWrap{width: 980px;margin: 0 auto;background-color: #ccc;}
+div.logWrap>h1{width: 200px;margin: 0 auto;}
+div.logWrap>h1>a{display: block;text-align: center;line-height: 75px;}
+
+div.navWrap{background-color: #1d5da4;}
+div.navWrap>nav.gnb{width: 980px;margin: 0 auto;}
+div.navWrap>nav.gnb li{float: left;width: calc(980px / 6);
+             border-right: 1px solid #336dac;}
+div.navWrap>nav.gnb li:first-child{border-left: 1px solid #336dac}            
+div.navWrap>nav.gnb a{display: block;text-align: center;line-height: 45px;
+color:#fff;font-weight: bold;}
+div.navWrap>nav.gnb a:hover{background-color:blue;}
+
+/* visual */
+div.visualWrap{height: 400px;overflow: hidden;
+background-image: url(../images/visualbg01.jpg);
+background-repeat: no-repeat;
+background-position: center;
+/* repeat-x repeat-y  no-repeat 10px 10px top right center */
+background-color: #203b6a;
+background: #203b6a url(../images/visualbg01.jpg) no-repeat center;
+}
+/* 이미지경로 주의 스타일시트기준으로 상위폴더로 올라가야함 
+cf. 같은 레벨폴더는 그냥 images 혹은 ./images */
+
+div.visualWrap>div.visual{
+    width: 980px;height: 400px; 
+    position: relative; margin: 0 auto;}
+div.visualWrap>div.visual>div.visualTxt{
+    position: absolute;top: 50%;margin-top: -92px;
+    font-weight: bold; font-size: 79px;line-height: 92px;
+    letter-spacing: 0.0825em;color: #FFF;
+}
+div.visualWrap>div.visual>img{position: absolute;right: 0;top: 20px;}
+
+

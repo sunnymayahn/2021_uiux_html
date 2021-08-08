@@ -36,11 +36,11 @@ div.navWrap>nav.gnb a:hover{background-color:blue;}
 
 /* visual */
 div.visualWrap{height: 400px;overflow: hidden;
-background-image: url(../images/visualbg01.jpg);
-background-repeat: no-repeat;
-background-position: center;
+_background-image: url(../images/visualbg01.jpg);
+_background-repeat: no-repeat;
+_background-position: center;
 /* repeat-x repeat-y  no-repeat 10px 10px top right center */
-background-color: #203b6a;
+_background-color: #203b6a;
 background: #203b6a url(../images/visualbg01.jpg) no-repeat center;
 }
 /* 이미지경로 주의 스타일시트기준으로 상위폴더로 올라가야함 
@@ -54,7 +54,7 @@ div.visualWrap>div.visual>div.visualTxt{
     font-weight: bold; font-size: 79px;line-height: 92px;
     letter-spacing: 0.0825em;color: #FFF;
 }
-div.visualWrap>div.visual>img{position: absolute;right: 0;top: 20px;}
+div.visualWrap>div.visual>img{position: absolute;right: 0;top: 30px;}
 
 /* banner */
 .bannerWrap{width: 980px;margin: 0 auto;margin-bottom: 30px;}
@@ -78,25 +78,30 @@ div.visualWrap>div.visual>img{position: absolute;right: 0;top: 20px;}
 .content li:last-child{margin-right: 0;}
 .content .txt{padding: 18px 16px;border: 1px solid #e5e5e5;
                 border-top: 0 none;}
-.content h3{font-size: 18px 14px;margin-bottom: 5px;}
+.content h3{font-size: 18px ;margin-bottom: 5px;}
 .content p{font-size: 14px;}
 .content img{display: block;}
 
 
 /* sec2st */
-.sec2st{width: 980px;margin: 0 auto;}
+.sec2st{width: 980px;margin: 0 auto;margin-bottom: 25px;}
 .sec2st li{float: left;width: 310px;margin-right: 25px;
             border: 1px solid #e5e5e5;
-            padding: 18px;position: relative;
+            padding: 18px;
+            position: relative;
             overflow: hidden;}
 .sec2st li:last-child{margin-right: 0;}
+
 .sec2st .txt{width: 150px;position: relative;}
+/* position: relative;지워도되지 않나 */
 .sec2st h3{font-size: 18px;margin-bottom: 13px;}
 .sec2st p{font-size: 14px;margin-bottom: 13px;}
 .sec2st a{font-size: 14px;color: #1c84ff;}
 .sec2st img{position: absolute;right: -40px;top: 2px;}
 
-/* sec3st */
+/* sec3st 오른쪽이미지 백그라운드처리
+질문 ?? 백그라운드처리는 스타일에서 url로 하는 건가?*/
+
 .sec3st{width: 980px;margin: 0 auto;margin-bottom: 30px; }
 .sec3st li{float: left;width: 310px;margin-right: 25px;
             border: 1px solid #e5e5e5;
@@ -110,26 +115,27 @@ div.visualWrap>div.visual>img{position: absolute;right: 0;top: 20px;}
 .sec3st li:nth-child(2){background-image: url(../images/content_icon02.png);}
 .sec3st li:nth-child(3){background-image: url(../images/content_icon03.png);}
 
-.sec3st .txt{width: 150px;position: relative;}
+.sec3st .txt{width: 150px;}
 .sec3st h3{font-size: 18px;margin-bottom: 13px;}
 .sec3st p{font-size: 14px;margin-bottom: 13px;}
 .sec3st a{font-size: 14px;color: #1c84ff;}
 
 
-/* footer */
+/* footer test */
 footer#footer{background-color: #5E5E5E;}
     .footWrap{background-color: #4D4D4D; height: 41px;}
     .footWrap>.foot{ background-color: skyblue ;
                     width: 980px; margin: 0 auto;height: 41px;
                 position: relative; }
     
-    .footWrap>.foot>.fmenu{width: 450px;background-color: blue; float: left;}
+    .footWrap>.foot>.fmenu{width: 420px;background-color: blue; float: left;}
     .footWrap>.foot>.fmenu>ul>li{float: left;width: 140px;}
     .footWrap>.foot>.fmenu>ul>li>a{
         display: block;text-align: center;line-height: 26px;
         height: :26px; padding: 10px 5px ; 
         color: white; font-size: 10px; letter-spacing: 70%;
         position: relative;}
+    .footWrap>.foot>.fmenu>ul>li>a:hover{background-color: orange ;}
 
         .fmenu>ul>li>a:after{
             content: "";width: 1px;height: 10px;display: block;
@@ -140,19 +146,34 @@ footer#footer{background-color: #5E5E5E;}
 
   
        .foot>.bbox{position: absolute;right: 0;}
-       /* ???.foot>.bbox>img{width: 55px;height: 41px; display: block; } */
+       .foot>.bbox>img{width: 100%;height: 41px; display: block; }
+        
+       /* div.bbox 없이 이미지만 처리가 안됨 이미지가 foot아래로 떨어짐
+        div로 먼저 처리해야하나? float right 하면 fmenu바로 뒤에 위치 
+        오른쪽끝으로 안가서 poa right :0으로 처리 
+
+        .bbox>img>a:hover{background-color: orange; } 이미지 하버 다른이미지 연결은 안되나??? */
+       
       
-
-
-
-
+      
 #footer>.info{margin: 0 auto; width: 980px; ; background-color: #1d3555 ; 
     height: 100px;padding: 15px; padding-left: 2px; color: white;
 position: relative;}
-#footer>.info>h3{float: left;position: absolute;width: 180px;
-                     top: 50%; margin-top: -15px;}
+#footer>.info>h3{width: 180px;
+                position: absolute;top: 50%; margin-top: -15px;}
+        /* #footer>.info>h3{float: left;} 없어도 왼쪽배치 poa없으면 top50퍼 적용이 안됨 */
 #footer>.info>address{width: 800px; float: right;
                font-style: normal ; font-size: 12px; line-height: 18px; }
+        /* {float :right 없으면 왼쪽하이미디어와 글자 겹쳐서 보임 요소 두개중에 하나는 퍼지션앱솔 
+            하나는 플로트라이트 이렇게 사용해도 되나?더 간단한 방법은?} */
+
+ 
+       /* footer */
+
+
+
+
+
 
 
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link:css  -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+      .nav{margin: 0 auto;background-color:cornflowerblue ; } 
+      .nav li{float: left; border: 1px solid #000;}
+      .nav>li>a{display: block;text-align: center;line-height: 50px;}
+      .nav>li>a:hover{background-color: darkorange ;color: white;}
+
+    @media screen and (max-width:599px) {
+        body{background: crimson;}
+        .nav li{width: 100%;  }
+       }
+    @media screen and (min-width:600px) and (max-width:899px) {
+        body{background: darkslateblue ;}
+        .nav li{width: 50%;  }   
+        }
+    @media screen and (min-width:900px) {
+        body{background: yellowgreen;}
+        .nav{width: 1000px;}
+        .nav li{width: 20%;  }   
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+   <ul class="nav clearfix">
+       <li><a href="#">menu</a></li>
+       <li><a href="#">menu</a></li>
+       <li><a href="#">menu</a></li>
+       <li><a href="#">menu</a></li>
+       <li><a href="#">menu</a></li>
+   </ul> 
+   
+</body>
+</html>

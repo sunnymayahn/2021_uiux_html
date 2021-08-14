@@ -4,10 +4,14 @@
 li{list-style:none}
 
 a{text-decoration:none;}
-a:link,a:visited{color:#000;}
+a:link,a:visited{text-decoration: none; color: #000;}
 .clearfix:after{
 	content: "";display: block;clear: both;}
+img{display: block}
 /*body{
 	background-color:orange;
 	background-image:url(../images/bg_grid.gif);
 }*/
+
+
+

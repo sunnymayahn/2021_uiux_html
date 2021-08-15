@@ -32,9 +32,9 @@
     <style>
        
         .top{width: 1200px;margin: 10px auto;padding: 0 40px;background-color:beige ;}
-        .top img{float: left;}
-        .util{float: right;}
-        .util li{float: left;width:150px;font-size: 20px;font-weight: bold;line-height: 50px;}
+        /* .top img{float: left;} */
+            .util{float: right;}
+            .util li{float: left;width:150px;font-size: 20px;font-weight: bold;line-height: 50px;}
 
         .slider{position: relative;}
         /* .slider img{background-size: cover;}cover 어떻게?? */
@@ -77,18 +77,18 @@
 
 
 
-
-        .news{padding: 150px 2px; background-color: rgb(204, 200, 200);}
-        .newsTxt,.newsbox{margin: 0 auto; width: 1200px; background-color:beige ;margin-bottom: 40px; }
+        .bgGray{background-color: rgb(204, 200, 200);}
+        .news{padding: 150px 0;margin: 0 auto; width: 1200px; background-color:beige  }
+        /* .newsTxt,.newsbox{margin: 0 auto; width: 1200px; background-color:beige ;margin-bottom: 40px; } */
         .newsTxt h1{font-size: 44px;letter-spacing: -2px;text-indent: -2px ; margin-bottom: 20px;}
         .newsTxt h1:after{width: 70px;height: 5px;background-color: #FFD44A ;
                             content: ""; display: block;
                             margin-top: 20px;} 
-                            .util{float: right;}
+                           
         
-        .newsMenu{float: right;}
+        .newsMenu{float: right;margin-bottom: 40px;}
         .newsMenu li{float: left; width:97px;height: 38px; }
-                   .newsMenu li a{
+        .newsMenu li a{
                      margin-right: 8px;
                      font-size:14px;font-weight: bold;line-height: 38px;
                      color:gray;
@@ -109,7 +109,7 @@
   
 
       .bgBlack{background-color: #000;}
-      .foot{width: 1200px;margin:0 auto;padding: 160px 32px;
+      .foot{width: 1200px;margin:0 auto;padding: 160px 0;
             background-color:steelblue ;position: relative;}
       .foot .btn{background-color: navy;
                     width: 180px;height: 32px;font-size: 14px ;line-height: 32px;
@@ -133,7 +133,7 @@
     </style>
 </head>
 <body>
-                    <div class="top clearfix">
+                 <div class="top clearfix">
                 <img src="images/nm_toplogo.JPG " alt="">
                 <nav class="util">
                     <ul class="clearfix">
@@ -182,19 +182,19 @@
             <ul class="clearfix">
                 <li>
                     <a href="#"><img src="images/nm_link01.8c7a40e.jpg" alt="#"></a>
-                    <h3><a href="">문화 만들기 ></a></h2>
+                    <h3><a href="">문화 만들기 ></a></h3>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
                 <li>
                     <a href="#"><img src="images/nm_link02.b7f7bba.jpg" alt="#"></a>
-                    <h3><a href="">인재 키우기 ></a></h2>
+                    <h3><a href="">인재 키우기 ></a></h3>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
                 <li>
                     <a href="#"><img src="images/nm_link03.73d78ef.jpg" alt="#"></a>
-                    <h3><a href="">마음 나누기 ></a></h2>
+                    <h3><a href="">마음 나누기 ></a></h3>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
@@ -211,7 +211,8 @@
             </div>
         </section>
 
-        <section class="news">
+        <section class="bgGray">
+            <div class="news">
             <div class="newsTxt clearfix">
                 <h1>재단소식</h1>
                 <ul class= "newsMenu clearfix">
@@ -242,7 +243,7 @@
                 </li>
                 <li>
                     <a href="#"><img src="images/nm_news4.jpg" alt="#"></a>
-                    <h3><a href="">공지사항4</a></h2>
+                    <h3><a href="">뉴스룸4</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
@@ -253,18 +254,19 @@
                 
 
             </div>
+        </div>
         </section>
 
 
     <footer class="bgBlack">
         <div class="foot">
-        <img src="images/nm_flogo.png" alt="#">
-        <div class="btn">
-            <a href="#">Family Site</a>
+            <img src="images/nm_flogo.png" alt="#">
+            <div class="btn">
+                <a href="#">Family Site</a>
         </div>
         
-        <address>서울특별시 구로구 디지털로26길 38, G-Tower 넷마블 
-            <br>Copyright © Netmarble Corp. All Rights Reserved. </address>
+            <address>서울특별시 구로구 디지털로26길 38, G-Tower 넷마블 
+                    <br>Copyright © Netmarble Corp. All Rights Reserved. </address>
             <div class="fmenu">
                <ul class="clearfix ">
                     <li><a href="">개인정보처리방침</a></li>
@@ -290,5 +292,5 @@
 
 <!-- 슬라이더 이미지커버
 슬라이더 페이저 숫자표시 위치
-재단소식 박스 3.5넣기 각메뉴탭이랑 연결
+재단소식 박스 현재3개 1개는 디플넌 3.5넣기 각메뉴탭이랑 연결 
 푸터 풋메뉴 first chile 왼쪽패딩 0값 소셜메뉴 패딩에도 적용  -->

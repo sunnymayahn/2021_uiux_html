@@ -31,7 +31,7 @@
 
     <style>
        
-        .top{width: 1200px;margin: 10px auto;padding: 0 40px;}
+        .top{width: 1200px;margin: 10px auto;padding: 0 40px;background-color:beige ;}
         .top img{float: left;}
         .util{float: right;}
         .util li{float: left;width:150px;font-size: 20px;font-weight: bold;line-height: 50px;}
@@ -55,19 +55,19 @@
         
 
         .content{width: 1200px;margin: 150px auto;background-color: skyblue;}
-        .conTxt{background-color:beige ;margin-bottom: 20px; }
-        .conTxt h1{font-size: 40px;letter-spacing: -4px; ; margin-bottom: 20px;}
+        .conTxt{background-color:beige; }
+        .conTxt h1{font-size: 44px;text-indent: -2px; letter-spacing: -2px; ; margin-bottom: 20px;}
         .conTxt h1:after{width: 70px;height: 5px;background-color: #FFD44A ;
                             content: ""; display: block;margin-top: 20px;} 
-        .conTxt p{width: 600px; font-size: 20px;float: right; margin-bottom: 100px; background-color: pink;}
+        .conTxt p{width: 600px; font-size: 20px;float: right; background-color: pink;}
        
        
-      .content li{float: left;width: calc((1200px - 50px)/3);margin-right: 25px;}
+      .content ul{margin: 150px 0; } 
+      .content li{float: left;width: calc((1200px - 50px)/3);margin-right: 25px;background-color: white;}
       .content li:last-child{margin-right: 0; }
-       .content h3, p{padding: 7px;}
+      .content h3, p{padding: 7px;}
       .content img{margin-bottom: 10px; }
       /* .content li {margin-bottom: 15px;} */
-      .content ul{margin-bottom: 150px;} 
 
        .conbox{background-color: #FFD44A;width: 900px; height: 140px; padding: 100px; position: relative;}
                             /* .container{height: 400px;background: skyblue;} */
@@ -77,11 +77,63 @@
 
 
 
+
+        .news{padding: 150px 2px; background-color: rgb(204, 200, 200);}
+        .newsTxt,.newsbox{margin: 0 auto; width: 1200px; background-color:beige ;margin-bottom: 40px; }
+        .newsTxt h1{font-size: 44px;letter-spacing: -2px;text-indent: -2px ; margin-bottom: 20px;}
+        .newsTxt h1:after{width: 70px;height: 5px;background-color: #FFD44A ;
+                            content: ""; display: block;
+                            margin-top: 20px;} 
+                            .util{float: right;}
+        
+        .newsMenu{float: right;}
+        .newsMenu li{float: left; width:97px;height: 38px; }
+                   .newsMenu li a{
+                     margin-right: 8px;
+                     font-size:14px;font-weight: bold;line-height: 38px;
+                     color:gray;
+                    display: block; text-align: center;}
+               
+
+        .newsMenu li a:hover{ border-radius: 19px;
+                            background-color: silver; 
+                            color: black;}
+                              
+       
+      .newsbox li{float: left;width: 360px; height: 466px; margin-right: 25px;
+                background: white; }
+       .newsbox li:last-child{display: none;}
+     
+      .newsbox h3, p{padding: 10px;}
+      .newsbox img{width: 100%;height: 180px; margin-bottom: 10px; }
+  
+
+      .bgBlack{background-color: #000;}
+      .foot{width: 1200px;margin:0 auto;padding: 160px 32px;
+            background-color:steelblue ;position: relative;}
+      .foot .btn{background-color: navy;
+                    width: 180px;height: 32px;font-size: 14px ;line-height: 32px;
+                    position: absolute;right: 0;top: 160px;
+                text-align: left;padding: 0 24px;}
+       .foot .btn a{color: gray;}
+       .foot address{font-size: 12px;font-style: normal;line-height: 20px;padding: 40px 0 50px; }
+        /* .fmenu1{float: left;} */
+        .fmenu li{float: left;background: navy;
+            padding: 0 15px ;border-right:1px solid gray ;
+            }
+        .fmenu li:first-child{padding-left :0}
+        .fmenu li:last-child{border-right: none;}
+        .fmenu li a{font-size: 14px;font-weight: bold; color: gray; }    
+        
+        .snsmenu{position: absolute;right: 0;bottom: 160px;} 
+        .snsmenu li{float: left; background: navy;}
+
+
+ 
     </style>
 </head>
 <body>
-        <div class="topWp">
-            <div class="top clearfix">
+                    <div class="top clearfix">
                 <img src="images/nm_toplogo.JPG " alt="">
                 <nav class="util">
                     <ul class="clearfix">
@@ -91,7 +143,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+       
         <ul class="slider">
             <li><img src="images/nm_banner01.jpg" alt="img1">
              <div class="sliderTxt">
@@ -159,29 +211,38 @@
             </div>
         </section>
 
-        <section class="News">
-            <div class="NewsTxt">
+        <section class="news">
+            <div class="newsTxt clearfix">
                 <h1>재단소식</h1>
-                <ul=nwsmenu clearfix>
+                <ul class= "newsMenu clearfix">
                  <li><a href="#">공지사항</a></li>
                  <li><a href="#">뉴스룸</a></li>
                  <li><a href="#">소셜미디어</a></li>
-             </ul>
+                </ul>
             </div>
 
-            <ul class="clearfix">
+               <ul class="newsbox clearfix">
                 <li>
-                    <h3><a href="">공지사항1</a></h2>
+                    <a href="#"><img src="images/nm_news1.jpg" alt="#"></a>
+                    <h3><a href="">뉴스룸1</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
                 <li>
-                     <h3><a href="">공지사항2</a></h2>
+                    <a href="#"><img src="images/nm_news2.jpg " alt="#"></a>
+                    <h3><a href="">뉴스룸2</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
                 <li>
-                    <h3><a href="">공지사항3</a></h2>
+                    <a href="#"><img src="images/nm_news3.jpg" alt="#"></a>
+                    <h3><a href="">뉴스룸3</a></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nm_news4.jpg" alt="#"></a>
+                    <h3><a href="">공지사항4</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur 
                         <br> Dolorem quo nemo nesciunt. Modi, illo!</p>
                 </li>
@@ -195,7 +256,39 @@
         </section>
 
 
-    <!-- <div class="container"></div> -->
+    <footer class="bgBlack">
+        <div class="foot">
+        <img src="images/nm_flogo.png" alt="#">
+        <div class="btn">
+            <a href="#">Family Site</a>
+        </div>
+        
+        <address>서울특별시 구로구 디지털로26길 38, G-Tower 넷마블 
+            <br>Copyright © Netmarble Corp. All Rights Reserved. </address>
+            <div class="fmenu">
+               <ul class="clearfix ">
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">SNS저작물 이용 동의서</a></li>
+                    <li><a href="">이메일 문의</a></li>
+                    <li><a href="">주무관청</a></li>
+              </ul>
+              <div class="snsmenu">
+                  <ul class="clearfix">
+                    <li><a href="#"><img src="images/nm_social1.png" alt="#"></a></li>
+                    <li><a href="#"><img src="images/nm_social2.png" alt="#"></a></li>
+                    <li><a href="#"><img src="images/nm_social3.png" alt="#"></a></li>
+                    
+                </ul>   
+              </div>
+            </div>
+            </div>
+    </footer>
    
 </body>
 </html>
+
+
+<!-- 슬라이더 이미지커버
+슬라이더 페이저 숫자표시 위치
+재단소식 박스 3.5넣기 각메뉴탭이랑 연결
+푸터 풋메뉴 first chile 왼쪽패딩 0값 소셜메뉴 패딩에도 적용  -->

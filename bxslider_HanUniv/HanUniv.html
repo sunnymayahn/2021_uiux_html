@@ -5,32 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>한국대학교</title>
- <!-- bxslider css -->
-    <link rel="stylesheet" href="css/jquery.bxslider.css">   
-    <link rel="stylesheet" href="css/reset.css">
+                                                                                            <!-- bxslider css -->
+                                                                                                <link rel="stylesheet" href="css/jquery.bxslider.css">   
+                                                                                                <link rel="stylesheet" href="css/reset.css">
 
-    <!-- jquery file -->
-    <!-- script:src -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.bxslider.js"></script>
-    
-    <script>
-            $(document).ready(function(){
-            $('.slider').bxSlider({
-                mode:"fade",
-                pager:false,
-                // auto:true
-            }); //slider
-          
-        });//jquery ready
-
-
-    </script>
-
+                                                                                                <!-- jquery file -->
+                                                                                                <!-- script:src -->
+                                                                                                <script src="js/jquery-3.1.1.min.js"></script>
+                                                                                                <script src="js/jquery.bxslider.js"></script>
+                                                                                                    <script>
+                                                                                                        $(document).ready(function(){
+                                                                                                        $('.slider').bxSlider({
+                                                                                                            mode:"fade",
+                                                                                                            pager:false,
+                                                                                                            // auto:true
+                                                                                                        }); //slider        
+                                                                                                    });//jquery ready
+                                                                                                </script>
 
     <style>
         .topbgblue{height: 40px; background-color:#0044AF ;}
-        .top{width: 1500px; margin: 0 auto;}
+        .top{width: 1200px; margin: 0 auto;}
         .topmenu{float: left;width: 360px;}
         .topmenu li{width: 120px;height: 40px;background-color: #00163B;
                     float: left;border-right:1px solid #0044AF;}
@@ -41,13 +36,21 @@
         .utilmenu li{width: 70px;height: 32px;color: white;
                     float: left;        }
         .utilmenu li a{display: block; text-align: center;line-height: 40px;
-                      font-size:12px ; color: white;}
+                      font-size:10px ; color: white;}
        
-        .header{width: 1500px;height: 114px; margin: 0 auto;padding: 10px;0}  
-        .header img{width: 220px; height: 70px; }
-        .gnb {position: absolute;right: 0;}  
-
-/* 
+        .header{width: 1200px;height: 120px; margin: 0 auto;padding: 20px 0; background-color: pink;}  
+        .header img{ float: left;margin-top: 10px;}
+        .gnb {float: right; }  
+        .gnb li{float: left;background-color: beige ;
+                text-align: right;padding: 7px 25px;height: 80px;}
+        .gnb li:last-child{padding-right: 0;padding-top: 7px;}        
+        .gnb li a{color: #7A7A7A; line-height: 66px;}
+                
+            /* display: flex;justify-content: center; } */
+        
+        
+        
+        /* 
             .util{float: right;}
             .util li{float: left;width:150px;font-size: 20px;font-weight: bold;line-height: 50px;}
 
@@ -93,7 +96,7 @@
          <div class="utilmenu">
              <ul class="clearfix">
                 <li><a href="#">글자크기</a></li>
-                <li><a href="#">up</a></li>
+                <li><a href="#">이미지</a></li>
                 <li><a href="#">찾아오시는길</a></li>
                 <li><a href="#">English</a></li>
                 <li><a href="#">사이트맵</a></li>
@@ -102,7 +105,7 @@
          </div>
     </div>   
 
-    <header class="header">
+    <header class="header clearfix">
         <img src="images/HG Univ logo.png" alt="#">
         <nav class="gnb">
             <ul class="clearfix">
@@ -111,7 +114,7 @@
                 <li><a href="#">학사안내</a></li>
                 <li><a href="#">대학생활</a></li>
                 <li><a href="#">학생지원센터</a></li>
-                <li><a href="#">이미지학생지원센터</a></li>
+                <li><a href="#"> <img src="images/gnb img.JPG" alt=""></a></li>
             </ul>  
         </nav>
     </header>

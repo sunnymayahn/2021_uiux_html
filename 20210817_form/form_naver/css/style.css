@@ -95,6 +95,8 @@ div#content .field.confirm select
             background-image: url(../images/btn_join2.gif);
             background-repeat: no-repeat;
             background-color: #1fbc02;
+            _background: #1fbc02;/* 내용가려짐 bgc와 구분해서사용 */
+          
             background-position: 50% -3px ;
             text-indent: -9999px;
             cursor: pointer;

@@ -4,7 +4,8 @@ body{font-family: 'Nanum Gothic', sans-serif;
 
 .blind{display: block;position: absolute;left: 0;top: -9999px;}
 fieldset{border: 1px solid #dadada;
-        background-color: #fff;}
+        background-color: #fff;
+        margin-bottom: 10px;}
                      /* fieldset은 그냥 태그이름 점 없음 */
 .wrap{
     width: 460px;margin: 0 auto; _background-color: skyblue; }
@@ -12,9 +13,13 @@ div#header{padding: 60px 0;}
 div#header>h1{width: 240px;margin: 0 auto;
     background-image: url(../images/pc_sp_join.png);
     background-repeat: no-repeat;
-    background-position: 0 -105px; height: 40px;}
+    background-position: 0 -105px; height: 44px;}
 div#header a{display: block;height: 44px; text-indent: -9999px; }
-div#content .field{position: relative;}
+div#content .field{position: relative;
+                border-bottom: 1px solid #f0f0f0;}
+
+.field.none{border-bottom: 0 none !important ;}
+
 div#content .field .inp-field{
         width: 350px;height: 49px;
         border: 0 none;font-size: 16px;
@@ -30,3 +35,53 @@ div#content .field .icon{
 div#content .field .icon.email{background-position: 0 -47px;}
 div#content .field .icon.pass{background-position: 0 -466px;}
 div#content .field .icon.pass2{background-position: 0 -515px;}
+ /* .icon.email 사이 스페이스 없으면 .email클래스 포함 요소 선택
+                한칸띄우면 스페이스 주면 .email 하위요소만 선택    
+                > 자식요소만 선택             */
+
+p.radio>input:nth-child(1):checked ~ label.male{background: skyblue !important;}
+p.radio>input:nth-child(2):checked ~ label.female{background: skyblue !important;}
+                    /* + 다음것만 선택 ~ 다음것 전체다 all 선택
+                        선택되면 배경색 컬러스블 선택안되면 하늘색빠짐 */
+ 
+ div#content .field.radio{height: 50px;}
+ div#content .field.radio input{position: absolute;left: 20px;top: 20px;}
+/* .field.radio 사이 .field.radio input사이 스페이스 없음 */
+ div#content .field .btn-label{
+     display: block; /* 인라인태그는 디플블럭 하고 위스 값 주기 */
+     width: 212px; height: 31px;
+     text-align: center;line-height: 31px;
+     border: 1px solid #dcdcdc;border-radius: 5px; 
+     position: absolute; top: 10px; background: white;
+     cursor: pointer;} 
+                 /* 남자여자 라벨 2개 생성 선택시 배경 색 바꾸고 
+                    남자 여자 라벨 포지션값주고 버튼2개는 숨기고  */
+
+
+ div#content .field .btn-label.male{left: 15px;}                   
+ div#content .field .btn-label.female{right: 15px;}                   
+                    /* 성별은 클래스 블라인드 처리 안하고 따로 디자인 */
+ div#content .field.birth label{
+                float: left;width: 53px;height: 49px;line-height: 49px; 
+                text-align: center;
+                background: #f7f7f7;color: #757575;border-right: 1px solid #efefef;
+                    }
+div#content .field.birth input{float: left;}
+div#content .field.birth .field-wall{float: left;
+                                    width: 0;height: 29px;
+                                border-right: 1px solid #cdcdcd;
+                                margin-top: 10px;text-indent: -9999px;}
+div#content .field.birth select{
+                            float: left;
+                            width: 110px;height: 29px;
+                            border: 0 none;
+                            line-height: 29px;margin-top: 10px;margin-left: 10px;
+                            margin-right: 7px;font-size: 15px;
+                            color: #757575; }
+
+/* common  클릭했을때 칸선택 사이즈 */
+.w458{width: 458px !important;}
+.w145{width: 145px !important;}
+.w130{width: 130px !important;}
+   
+

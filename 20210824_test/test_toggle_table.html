@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle circle cross</title>
+<style>
+ .toggle{
+    width: 35px;height: 35px;border: 1px solid #aaa;
+        position: relative;cursor: pointer;
+        float: right; }
+.toggle div{
+    width: 24px;height: 3px;background: #aaa;
+    border-radius: 1.5px;
+    position: absolute;left: 50%;
+    margin-left: -12px; }
+
+    .toggle div.bar1{top: 8px;}
+    .toggle div.bar2{top: 50%;margin-top: -1.5px;}
+    .toggle div.bar3{bottom: 8px;}
+   
+    .circle{
+    width: 50px;height: 50px;background: #aaa;
+    position: absolute;right: 16px;bottom: 25px;
+    border-radius: 50%;}
+
+    .cir:after{
+        content: "";display: block;width: 24px;height: 2px;
+        background-color: #fff;position: absolute;
+        left: 50%;top: 50%;
+        margin-left: -12px;margin-top: -1px;}
+        
+    .cir:before{
+        content: ""; display: block;position: absolute;
+        width: 2px;height: 24px;
+        background-color: #fff;
+        left: 50%;top: 50%;
+        margin-left: -1px;margin-top: -12px;}
+
+</style>
+
+
+</head>
+<body>
+    <div class="toggle">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
+    <div class="circle cir"></div>
+    
+</body>
+</html>

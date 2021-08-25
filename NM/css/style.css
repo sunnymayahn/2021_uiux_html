@@ -1,0 +1,101 @@
+@charset "utf-8";
+body{font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.6px}
+
+    .top{width: 1200px;margin: 10px auto;padding: 0 40px;background-color:rgb(136, 136, 136) ;}
+    .top img{float: left;}
+        .util{float: right;}
+        .util li{float: left;width:150px;font-size: 20px;font-weight: bold;line-height: 50px;}
+
+    .slider{position: relative;}
+    /* .slider img{background-size: cover;}cover 어떻게?? */
+    .bx-wrapper {
+        -moz-box-shadow: 0 none;
+        -webkit-box-shadow: 0 none;
+        box-shadow: 0 none;
+        border: 0 none;
+        margin-bottom: 0;
+             }
+    /* .bx-wrapper .bx-pager{
+        bottom: 30px;} */
+    .sliderTxt{position: absolute;top: 20%;left: 70px; color: white }
+    .sliderTxt h1{font-size: 75px;margin-bottom: 20px;}
+    .sliderTxt p{font-size: 30px;}
+    .sliderTxt p:after{width: 500px;height: 2px;background-color: white;
+                        content: ""; display: block;margin-top: 70px;}    
+    
+
+    .content{width: 1200px;margin: 150px auto;background-color: skyblue;}
+    .conTxt{background-color:beige; }
+    .conTxt h1{font-size: 44px;text-indent: -2px; letter-spacing: -2px; ; margin-bottom: 20px;}
+    .conTxt h1:after{width: 70px;height: 5px;background-color: #FFD44A ;
+                        content: ""; display: block;margin-top: 20px;} 
+    .conTxt p{width: 600px; font-size: 20px;float: right; background-color: pink;}
+   
+   
+  .content ul{margin: 150px 0; } 
+  .content li{float: left;width: calc((1200px - 50px)/3);margin-right: 25px;background-color: white;}
+  .content li:last-child{margin-right: 0; }
+  .content h3, p{padding: 7px;}
+  .content img{margin-bottom: 10px; }
+  /* .content li {margin-bottom: 15px;} */
+
+   .conbox{background-color: #FFD44A;width: 900px; height: 140px; padding: 100px; position: relative;}
+                        /* .container{height: 400px;background: skyblue;} */
+        .conbox h1{margin-bottom: 15px;}
+        .conbox img{position: absolute;top: 100px; right: -100px}
+
+
+
+
+    .bgGray{background-color: rgb(204, 200, 200);}
+    .news{padding: 150px 0;margin: 0 auto; width: 1200px; background-color:beige  }
+    /* .newsTxt,.newsbox{margin: 0 auto; width: 1200px; background-color:beige ;margin-bottom: 40px; } */
+    .newsTxt h1{font-size: 44px;letter-spacing: -2px;text-indent: -2px ; margin-bottom: 20px;}
+    .newsTxt h1:after{width: 70px;height: 5px;background-color: #FFD44A ;
+                        content: ""; display: block;
+                        margin-top: 20px;} 
+                       
+    
+    .newsMenu{float: right;margin-bottom: 40px;}
+    .newsMenu li{float: left; width:97px;height: 38px; }
+    .newsMenu li a{
+                 margin-right: 8px;
+                 font-size:14px;font-weight: bold;line-height: 38px;
+                 color:gray;
+                display: block; text-align: center;}
+           
+
+    .newsMenu li a:hover{ border-radius: 19px;
+                        background-color: silver; 
+                        color: black;}
+                          
+   
+  .newsbox li{float: left;width: 360px; height: 466px; margin-right: 25px;
+            background: white; }
+   .newsbox li:last-child{display: none;}
+ 
+  .newsbox h3, p{padding: 10px;}
+  .newsbox img{width: 100%;height: 180px; margin-bottom: 10px; }
+
+
+  .bgBlack{background-color: #000;}
+  .foot{width: 1200px;margin:0 auto;padding: 160px 0;
+        background-color:steelblue ;position: relative;}
+  .foot .btn{background-color: navy;
+                width: 180px;height: 32px;font-size: 14px ;line-height: 32px;
+                position: absolute;right: 0;top: 160px;
+            text-align: left;padding: 0 24px;}
+   .foot .btn a{color: gray;}
+   .foot address{font-size: 12px;font-style: normal;line-height: 20px;padding: 40px 0 50px; }
+    /* .fmenu1{float: left;} */
+    .fmenu li{float: left;background: navy;
+        padding: 0 15px ;border-right:1px solid gray ;
+        }
+    .fmenu li:first-child{padding-left :0}
+    .fmenu li:last-child{border-right: none;}
+    .fmenu li a{font-size: 14px;font-weight: bold; color: gray; }    
+    
+    .snsmenu{position: absolute;right: 0;bottom: 160px;} 
+    .snsmenu li{float: left; background: navy;}
+

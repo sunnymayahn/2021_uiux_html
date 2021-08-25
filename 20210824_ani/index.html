@@ -15,7 +15,7 @@
         animation-fill-mode: forwards; /* 끝에서 멈춤 */
         animation-iteration-count: infinite;     /* 반복 */
         animation-direction:alternate ;       /* 복원 */
-        animation-timing-function: linear;  /* 애니메이션 작동 ease-in ease-out */
+        animation-timing-function: linear;  /* 애니메이션 작동 ease-in ease-out linear 리니어사용하면 통통느낌 줄수없음  */
         animation-delay:1s;}
 
         @keyframes ani{
@@ -35,9 +35,12 @@
             animation-direction:alternate ; }       /* 복원 */         
         
         @keyframes scroll{
-            from{bottom: 30px;}
-            to{bottom: 50px;}
-                    }
+            _from{bottom: 30px;}
+            _to{bottom: 50px;}
+             0%,100%{bottom: 30px;}
+             50%{bottom: 50px;}
+             _100%{bottom: 30px;}
+             }
 
         .box1 .cir{width: 10px;height: 10px;background-color: white;
                    border-radius: 50%;

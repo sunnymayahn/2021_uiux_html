@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trnasform</title>
+<link rel="stylesheet" href="../css/reset.css">
+<style>
+
+    .container{width: 1000px;margin: 0 auto;}
+    .bg1{background: skyblue !important}
+    .mb2{margin-bottom: 2em !important}
+    .pt2{padding-top: 2em !important}
+    .pb2{padding-bottom: 2em !important}
+    .py2{padding: 2em 0 !important;}
+
+    .container img{
+            width: 100%; transition: 0.3s;
+            _transform-origin: 50% 50% ;}
+            /* 트랜지션 전환시간주면 애니효과 줄수있다 
+               아래호버 트랜스폼(트래Y위로이동 or 스케일) 부드럽게
+            transform-origin: 0 0;트랜스폼오리진: 고정핀값을 어디에 줄지 결정
+            transform-origin: right bottom;} 트랜스폼 중심축은 가운데 */
+                         
+    .gallList li{float: left;width: calc( (100% - 40px) / 5);
+                 margin-right: 10px;
+                _overflow: hidden;
+                _background: orange; }
+    .gallList li:last-child{margin-right: 0;}
+    .gallList li:hover img {transform: translateY(-15px);
+                 box-shadow: 0 5px 10px rgba(0,0,0,0.3);}
+        /* scale(1.1);} 호버하면 그림크기 스케일이 1.1커짐 */
+
+    .newsList li{float: left;width: calc( (100% - 30px) / 3);
+                margin-right: 10px;  }
+    .newsList li:last-child{margin-right: 0;}
+    .newsList li:hover img{transform: translateY(-15px);
+                 box-shadow: 0 5px 10px rgba(0,0,0,0.3);}
+
+</style>
+
+</head>
+<body>
+    <div class="container mb2">
+        <h3>GALLERY</h3>
+        <ul class="gallList clearfix">
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+        </ul>
+        
+    </div>
+
+    <div class="bg1 py2">
+      <div class="container">
+            <h3 class="mb2">NEWS</h3>
+            <ul class="newsList clearfix">
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+            
+            </ul>
+     </div>
+   </div>
+</body>
+</html>

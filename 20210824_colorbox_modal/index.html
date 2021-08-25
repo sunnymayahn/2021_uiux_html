@@ -27,7 +27,8 @@
         // true 는 문자아니고 예약어 따옴표없음
         // 유트브 삼성광고 클릭> 영상하단오른쪽 공유> 퍼가기
         // 퍼가기 소스에서 링크값 바디에 입력 영상화면비율계산
-        // 영상재생화면비율 16:9 이너위스 이너하잍 값 계산해서 넣기
+        // 영상 윈도우 재생시 아이프레임 안에 동영상재생 
+        // 영상 화면비율 16:9 이너위스 이너하잍 값 계산해서 넣기
         $(document).ready(function(){
             $(".modal").colorbox({ 
                 rel:".modal"
@@ -50,6 +51,7 @@
    <div class="container">
        <ul>
            <li><a href="../images/img1.jpg" class="modal" title="앵무새"><img src="../images/img1.jpg" alt=""></a></li>
+           <!-- 클래스 지정 스크립트와 연결 에이링크에 실제크기 사진 뒤에 이미지소스는 썸네일처럼 용량작은파일연결  -->
            <li><a href="../images/img2.jpg" class="modal" title="장미"><img src="../images/img2.jpg" alt=""></a></li>
            <li><a href="../images/img3.jpg" class="modal" title="거위"><img src="../images/img3.jpg" alt=""></a></li>
            <li><a href="https://www.youtube.com/embed/hsLP5SLsUY0"class="youtube" ><img src="../images/img4.jpg" alt=""></a></li>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    https://animate.style/에서 링크와 바디h1그대로 카피해서 적용해봄-->
+ 
+  <link rel="stylesheet" href="../css/reset.css">
+  
+  <link rel="stylesheet" href="animate.css">
+  <script src="wow.js"></script>
+  
+  <script>
+    new WOW().init();    // java script사용 문법 WOW 사용 선언해주기 
+  </script>
+     
+        <!-- WOW 애니메이션 사용법 1 애니링크 2 애니스크립소스 3<script>스크립선언 -->
+
+<style>
+      
+      h1{width: 100px;height: 100px;background: orange; }
+      
+      /* position: absolute; left: 50%;top: 50%;  margin-left: -50px;margin-top: -50px;} */
+      /* transform: translate(-50%, -50%);transform-origin: center; }
+        이미 트랜스폼이적용된 애니메이션이라 중복적용 안됨/ 마진레프트 마진탑 마이너스로처리 */
+    
+    .container{width: 1000px;margin: 0 auto;}
+    li{float: left;width: calc( (100% - 40px) / 5 ) ;
+            background: skyblue;margin-right: 10px; height: 150px;
+            display: flex;justify-content: center;align-items: center;
+            border-radius: 10px;}
+
+     li.list5 {width: calc( (100% - 40px) / 5 ) ;}
+     li.list4 {width: calc( (100% - 30px) / 4 ) ;}
+
+    .test1 li:last-child{margin-right: 0;}
+    .mb1{margin-bottom: 2em;}
+  </style>
+
+</head>
+<body>
+    <!-- <h1 class="animated bounceInLeft">An animated element</h1>  -->
+    
+    <h1 class="wow fadeInDown"></h1> 
+    <div style="height:2000px "></div> <!-- 세로선 스크롤생성 -->
+    <div class="container test1 mb2">
+        <ul class="clearfix" >
+            <li class="wow bounceInLeft" data-wow-delay="0" data-wow-offset="0">test </li>
+            <li class="wow fadeInDown" data-wow-delay="0.1s" data-wow-offset="0" >test </li>
+            <li class="wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="0">test </li>
+            <li class="wow fadeInDown" data-wow-delay="0.3s" data-wow-offset="0">test </li>
+            <li class="wow fadeInDown" data-wow-delay="0.4s" data-wow-offset="0">test </li>
+        </ul>
+    </div>
+    <div class="container mb2">
+        <h2 class="wow fadeInLeft" data-wow-delay="0.5s" >Lorem, ipsum.</h2>
+        <p class="wow fadeInLeft" data-wow-delay="1s" >Lorem ipsum dolor sit amet
+                                       consectetur adipisicing elit. Eaque, hic.</p>
+    </div>
+    <div style="height:500px "></div>
+
+    <div class="container test1 ">
+        <ul class="clearfix" >
+            <li class="wow pulse list4" data-wow-delay="0" data-wow-offset="0" data-wow-iteration="infinite">test </li>
+            <li class="wow pulse list4" data-wow-delay="0.1s" data-wow-offset="0" data-wow-iteration="infinite" >test </li>
+            <li class="wow pulse list4" data-wow-delay="0.2s" data-wow-offset="0" data-wow-iteration="infinite">test </li>
+            <li class="wow pulse list4" data-wow-delay="0.3s" data-wow-offset="0" data-wow-iteration="infinite">test </li>
+                    </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        
+       .hTopWp{background: #0763a2 url(topbg01.jpg) no-repeat center ;}
+       .hTop{width: 980px;margin: 0 auto;color:white;
+            position: relative;height: 90px;
+            _background: black;
+            }
+ /* position */
+        /* h1{width: 100px;background: skyblue;}
+        .search{position: absolute; width: 200px;height: 50px;
+                top: 0;left: calc (50% - 150px) ;  text-align: center;
+                 background: orange;}
+        .snsMenu{position: absolute;
+            width: 300px; height: 50px;background: green;right: 0;top: 0;} 
+        .hBtm{height: 50px;background: red;_margin-top: 30px;} */
+        
+/* float */
+        /* h1{width: 100px;background: skyblue;float: left;}
+        .search{float: left;width: 200px;height: 50px;background: orange;margin-left: 200px;}
+        .snsMenu{float: right;width: 300px;height: 50px;background: green;} */
+
+/* flex 스트레치기능*/
+        .hTop{display: flex; justify-content:space-between;align-items: center;
+        }
+        h1{width: 100px;height: 50px; background: skyblue;}
+        .search{width: 200px;height: 50px; background: orange;}
+        /* display:flex;justify-content: center;align-items: center; } */
+        .snsMenu{width: 300px;height: 50px; background: green;}
+
+
+    </style>
+
+
+</head>
+<body>
+    <header id="header">        <!-- 100% -->
+        <div class="hTopWp">     <!-- 100% -->    
+    <!-- <div class="hTop clearfix"> 플로트로 정렬할때 클리어픽스-->
+              <div class="hTop"><!-- 980 플렉스쓸때는 clearfix 삭제-->
+                <h1><a href="#">tour</a></h1>
+                <div class="search">검색</div>
+                <div class="snsMenu">sns</div>
+     
+            </div> 
+        </div>
+        <div class="hBtm"></div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+ .box{width: 1000px;margin: 0 auto;background: gray;
+    display: flex;justify-content: space-between;align-items: center;
+    /* flex-direction: column_reverse; */
+    flex-direction: column;
+    height: 400px;}
+    /* 플렉스-다이렉션 축을 바꾼다 기본축은 로우 컬럼으로 설정하면 정렬기준축이 컬럼 */
+
+ .box div{width: 100px;height: 100px;}
+ .box1{background: red;}
+ .box2{background: blue;}
+ .box3{background: green;}
+</style>
+
+<div class="box">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</div>
+
+</body>
+</html>

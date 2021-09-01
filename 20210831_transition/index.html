@@ -32,7 +32,7 @@
 
     .box1 .circle{
         width: 50px;height: 50px;_background: pink;
-    /* 여기까지하면 안나옴 위치값없어서*/
+    /* 여기까지하면 안나옴 위치값 없어서*/
     position: absolute;left: 50%;top: 50%;
     transform: translate(-50%, -50%);
     transition: 00.3s;border: 4px solid #fff;
@@ -50,10 +50,10 @@
                     transform: translate(-50%, -50%)}
 
 
-          
+    /* {트랜스폼:트랜스레이트(-50%,-50%)} 중괄호 처음부터 끝 스페이스주지 말기       */
 
-    .circle .bar1 {transform: translate (-50%,-50%) rotate(90deg);}
-    .circle .bar2 {}
+    .circle .bar1{transform: translate(-50%,-50% )rotate(90deg)}
+   
 
 
 

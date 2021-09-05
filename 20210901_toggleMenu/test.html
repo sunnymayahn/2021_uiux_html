@@ -1,40 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" href="../css/reset.css">
-    <style>
-        .top{margin-top: 20px;}
-        h1{float: left;}
-        .tmenu{float: left;}
-        .tmenu a{padding: 5px;}
-        .toggle{border: 1px solid #000;
-        width: 50px;height: 50px;position: absolute;top: 20px;right: 100px;}
-        /* .toggle div{width: 40px;height: 5px;border-radius: 3px;color: #000;
-        position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);} */
-        .toggle div{ width: 34px;height: 5px;background: black;border-radius: 3px;
-        position: absolute;left: 50%;top: 50%; color: #000;
-        transform:translate(-50%, -50%);}
-        .bar1{position: absolute;top: 8px;}
+<script src="../js/jquery-3.1.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".toggle").click(function(){
+            var toggle=$(".toggle").attr("class")
+            if(toggle == "toggle"){
+                $(".toggle").addClass("active");
+                $(".tMenu").animate({left:0},300)
+            }else{
+                $(".toggle").removeClass("active");
+                $(".tMenu").animate({left:"-100%"},300)
+            }
+        });
+
+        $(window).resize(function(){
+            $(".tMenu").attr("style","")
+            $(".toggle").removeClass("active");
+        });
+    });
+</script> 
+
+ <style>
+    html,body{height: 100%;}
+    /* 기능무엇? */
+    .top{ background: #444; position: relative; width: 100%;  }
+    .top a{color:white}
+        h1{float: left; padding: 10PX 20px; line-height: 40px; }
+
+    .tMenu a{padding: 10px; line-height: 40px;display: block;float: left;}
+    .toggle{_border: 1px solid #000; display: none;
+    width: 50px;height: 50px;position: absolute;top: 10px; right: 20px;}
+    .toggle div{width: 40px;height: 5px;border-radius: 3px;background-color: white;
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    
+   .toggle .bar1{top: 14px;}
+   .toggle .bar3{top: 36px;}
+   /* .bar1{top: 14px;}
+   .bar3{top: 36px;} */
+   /* 왜 안되지?.toggle 필요? */
+   .toggle.active .bar1{ top: 50%; transform: translate(-50%,-50%) rotate(45deg);}
+   .toggle.active .bar3{ top: 50%; transform: translate(-50%,-50%) rotate(-45deg);}
+      .toggle.active .bar2{opacity: 0;}
+      
+   @media screen and (min-width: 900px)
+   { body{background: wheat ;}
+    .top{width: 1200px; left: calc(50% - 600px);position: fixed;}
+}
+   @media screen and (min-width: 600px) and (max-width:899px){
+       body{background: orange;}
+   }
+   @media screen and (max-width: 599px){
+.toggle{display: block; position: fixed;}
+.tMenu{width: 100%;height: 100%; background-color: steelblue;
+    position: fixed;left: -100%;
+    /* top: 0; */
+       display: flex;justify-content: center;align-items: center;}
+.nav>a{float: none;text-align: center;background: purple;margin: 5px;}
+
+
+   }
+ 
     </style>
 </head>
 <body>
     <div class="top clearfix">
-        <h1><a href="">logo</a></h1>
-        <div class="tmenu">
-            <a href="">Lorem ipsum .</a>
-            <a href="">Delectus !</a>
-            <a href="">Assumenda !</a>
-            <a href="">Fugit </a>
+        <h1><a href="">TEST</a></h1>
+        <div class="tMenu">
+            <div class="nav clearfix">
+                <a href="">Lorem ipsum .</a>
+                <a href="">Delectus !</a>
+                <a href="">Assumenda !</a>
+                <a href="">Fugit </a>
+            </div>
         </div>
     </div>
     <div class="toggle">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
+    </div>
+    <div class="">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, autem magni quisquam ea dignissimos, vel quam corrupti, consectetur soluta libero nostrum ut qui consequatur quis dolore atque dolorum? Id quis impedit, voluptas fugit ducimus delectus expedita provident voluptatibus inventore vero modi aperiam nesciunt ipsum? Nulla dicta alias dolore reprehenderit inventore recusandae odit laborum reiciendis non? Maxime dignissimos incidunt eaque sunt consequatur eos facilis perferendis repellendus, harum molestias quidem, dolorum laudantium laboriosam vel deleniti aliquam rem ducimus nobis fuga delectus nemo voluptatum! Ab eum aliquid beatae error ipsa ratione similique dignissimos perspiciatis omnis architecto, sed maiores, voluptatem voluptate, quam provident reiciendis!
     </div>
 </body>
 </html>

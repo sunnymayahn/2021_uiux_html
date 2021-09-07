@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+</head>
+<body>
+    <script>
+        // = 대입연산자 == 비교연산자
+        var eng = 40;
+        var math = 80;
+
+        if(eng == 40){
+            console.log("영어 점수는 40점");
+            document.write("<div class='box'>영어 점수는" + eng + "점</div>")
+        }
+        if(eng >50){
+            document.write("영어점수는 50보다 큽니다. 참")
+        }else{
+            document.write("영어점수는 50보다 작습니다. 거짓<br>")
+        }
+
+        const age = 19;    //var대신 const와let구분사용  
+        const gender = "W" //const는 상수
+        let result;        //let은 변수
+
+        if (age >= 19){
+            result="성인"
+             if(gender == "M"){
+                 result="성인남자"
+             }else{
+                 result="성인여자"
+             }
+
+        }else{
+            result = "미성년자";
+            if(gender == "M"){
+                result ="미성년남자"
+            }else{
+                result="미성년여자"
+            }
+        }
+
+
+        document.write(result);
+     
+        // function 이름(){}
+        //  function docPrint(){}
+        // function docPrint(doc){
+        //     document.write(doc)
+        // }
+        // docPrint("영어점수는 50점");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>917 event</title>
+
+    <style>
+        .box span{color:red}
+    </style>
+</head>
+<body>
+    <div class="box">Lorem, ipsum dolor sit amet 
+        <span> consectetur</span>  adipisicing elit. Fugiat dolorum 
+       <span>ullam </span> inventore eum recusandae  
+       <span>quos quiss</span> sed optio, minus labore.</div>
+    <!-- <button class="btn">클릭</button> -->
+    <button class="btn" onclick="boxColor()">클릭</button>
+    <!-- 태그에서 온클릭 바로 실행 -->
+    <script>
+        //버튼 class의 .btn 클릭해서  
+          // 리스너등록/무언가(함수) 실행 
+          // 예) .box의 폰트색을 red 변경
+
+        const btn = document.getElementsByClassName("btn");
+        const box = document.getElementsByClassName("box");
+        const spn = document.getElementsByTagName("span");
+
+        // 2리스너를 프로퍼티로 등록
+        // btn[0].onclick = onBox;
+        // function onBox(){
+        //     box[0].style.color ="red"
+        //     } 
+      
+      
+            // btn[0].onclick = function(){
+            //      box[0].style.color ="red"
+            // } 
+                
+        // 3 addEventListener()메소드 활용
+        btn[0].addEventListener("click", function(){
+            box[0].style.color = "purple";
+            box[0].style.fontSize = "40px";
+            spn[0].style.color = "blue";
+            spn[1].style.color = "blue";
+            spn[2].style.color = "blue";
+        });
+
+        
+
+        // btn[0].addEventListener("click", onBox);
+        //         function onBox(){}
+
+
+
+
+        // jquery로실행 js라이브러리필요   
+        // $(".btn").click(function(){
+        //     $(".box").css("color","red")
+        // } )
+
+
+        // btn[0].onclick = boxColor; 
+        // function boxColor(){console.log("확인")}
+        // 함수를 불러온거
+
+        // btn[0].onclick = function(){console.log("확인1")
+        // }함수를 바로 실행하는거
+
+    </script>
+</body>
+</html>

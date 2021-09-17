@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>917 event</title>
+
+    <style>
+        .box span{color:red}
+    </style>
+</head>
+<body>
+    <div class="box">Lorem, ipsum dolor sit amet 
+        <span> consectetur</span>  adipisicing elit. Fugiat dolorum 
+       <span>ullam </span> inventore eum recusandae  
+       <span>quos quiss</span> sed optio, <span>minus labor</span> minus labore.</div>
+
+       <span>test</span>
+
+    <!-- <button class="btn">클릭</button> -->
+        <button class="btn" onclick="boxColor()">클릭</button>
+    
+    <!-- 태그에서 온클릭 바로 실행 -->
+    <script>
+        
+
+        const btn = document.getElementsByClassName("btn");
+        const box = document.getElementsByClassName("box");
+        const span = document.getElementsByTagName("span");
+        const spanSel = document.querySelectorAll(".box span");
+        const spanall = document.querySelectorAll("span");
+        const spanAll= box[0].getElementsByTagName("span");
+    // const spanAll = document.getElementsByClassName("box")[0].getElementsByTagName("span");
+        
+        // 3 addEventListener()메소드 활용
+        // span dom구해서->컬렉션
+        btn[0].addEventListener("click", function(){
+            // box[0].style.color = "purple";
+            box[0].style.fontSize = "30px";
+
+            // spn[0].style.color = "blue";
+            // spn[1].style.color = "blue";
+            // spn[2].style.color = "blue";
+            // spn[3].style.color = "blue";
+
+            for(let i=0;i<spanAll.length;i++){
+                spanAll[i].style.color="blue"
+                // spanSel[i].style.color="blue"
+            }
+
+            // for(let i=0;i<spanall.length;i++){
+            //     spanall[i].style.color="blue"}
+            //     // 클릭옆에 스판 테스트 글자 까지 전체블루 
+           
+        });
+
+      
+    </script>
+</body>
+</html>

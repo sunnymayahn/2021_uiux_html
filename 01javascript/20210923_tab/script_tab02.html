@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>923 js tab menu</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .tab{display: flex;}
+        .tab li{width: 100%;text-align: center;
+                padding: 10px 0;}
+        .tab li.on{background: skyblue;}
+        .box div{display: none;width: 200px;}
+        /* .box div:first-child{display: block;} */
+        .box div.view{display: block;}
+
+    </style>
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+        
+    </ul>
+    <div class="box">
+        <div>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, id?</div>
+        <div>2Expedita impedit eligendi odit et voluptates dolorum, sequi iusto nemo!</div>
+        <div>3Voluptates doloremque libero eveniet deserunt facilis ad voluptas voluptatum tempore.</div>
+        <div>4Aliquam eius alias cum eaque placeat doloribus, iure deserunt laboriosam.</div>
+    </div>
+    <script>
+        const tabList = document.querySelectorAll(".tab li");
+        const divList = document.querySelectorAll(".box div");
+
+
+        for(let j=0;j<tabList.length;j++){
+            tabList[j].onclick = function(){
+             
+                for(let i=0;i<tabList.length;i++){
+                 tabList[i].classList.remove("on");
+                     //addClass( ) removeClass("on")
+            };         
+            // this.classList.add("on");
+                tabList[j].classList.add("on");
+
+
+                for(let i=0;i<divList.length;i++){
+                //   divList[i].classList.remove("view");
+                  divList[i].style.display = "none";
+                        
+                };
+                    
+                // divList[j].classList.add("view"); 
+                divList[j].style.display= "block";
+
+            }
+            
+        } 
+    </script>
+</body>
+</html>

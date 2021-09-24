@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>924 jquery01</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("p").hide()
+            //$("p").eq(0).hide().show();
+            $("p").eq(0).css("background-color","violet");//set
+            let pBg = $("p").eq(0).css("background-color");//get
+            // console.log(pBg);
+            // console.log($("p").length);
+        $(".btn").on("click",function(){
+            $("p").eq(1).css({
+                "background":"skyblue",
+                "border":"1px solid #000",
+                "position":"relative",
+                "left":"100px"
+            })
+        });
+
+        $(".btn1").click(function(){
+            $("p").eq(1).css({
+                "background":"white",
+                "border":"initial",
+                "position":"initial"
+                
+            }); 
+            //$("p").eq(1).attr("style","")
+        });
+        });
+        
+    </script>
+</head>
+<body>
+    <button class="btn">변경</button>
+    <button class="btn1">원래대로</button>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur praesentium maiores laborum beatae! Sunt aperiam fugiat nemo animi quisquam iusto perferendis ut delectus, architecto harum magnam enim inventore dolorem quia!</p>
+    <p>Sunt labore eaque odio perferendis error. Recusandae amet laboriosam fuga, ipsa sapiente quod aspernatur? Debitis a est porro ipsum quo facilis ullam reprehenderit. Saepe voluptatem maxime eos asperiores cumque accusantium.</p>
+    <p>Laboriosam deserunt quaerat quod asperiores dolor esse harum temporibus architecto praesentium. Architecto nesciunt iste vitae accusantium iusto voluptate facere harum optio debitis repellat asperiores repudiandae, fuga ducimus tempora! Ipsa, ab.</p>
+    <p>Quos incidunt autem consequuntur aspernatur expedita eaque vel, unde minus facere, dolore fuga dolorem tempora necessitatibus facilis voluptatibus! Fugiat dicta dolorum explicabo nesciunt aut sit, quis doloremque modi numquam maxime.</p>
+
+    <script>
+
+        // for(let i=0;i<4;i++){
+        // document.getElementsByTagName("p")[0].style.display="none";
+        // }
+    </script>
+</body>
+</html>

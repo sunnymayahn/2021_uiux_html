@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>928 mouse01 마우스좌표</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea explicabo temporibus hic, corporis quam ex dicta impedit cum vel officia iste minima rem alias voluptate numquam. Obcaecati illo libero sunt voluptatibus distinctio quasi fugiat praesentium dolore adipisci veniam maxime esse numquam voluptatum aspernatur ea, assumenda quia, magnam, saepe iusto ratione? Facilis expedita repudiandae consectetur alias rem itaque mollitia nobis adipisci neque culpa rerum asperiores quibusdam ullam laboriosam, dolorem, reprehenderit eos voluptas eaque commodi numquam libero iure. Eveniet sint repudiandae dolor a ducimus sequi quisquam ullam reiciendis molestiae nesciunt aliquam unde neque, vel et ipsam eum perspiciatis ut officiis ad fuga!
+    <img src="../images/testimg.jpg" alt="" onmousemove="where(event)">
+    <div class="info">
+
+    </div>
+    <script>
+        const info = document.querySelector(".info")
+        function where(e){
+            let txt = "";
+            // txt+=e.clientX + ","+ e.clientY;
+            txt += ` clientX : ${e.clientX} , clientY : ${e.clientY}<br>`
+            txt += ` offsetX : ${e.offsetX} , offsetY : ${e.offsetY}<br>`
+                      
+            info.innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

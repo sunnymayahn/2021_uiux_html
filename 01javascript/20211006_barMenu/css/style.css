@@ -10,7 +10,7 @@
     position: absolute;left: 50%;transform:translateX(-50%);
     border-radius: 4px;}
 .menu li a{display:block ; text-align: center;line-height: 40px;}
-.bar{width: 200px;height: 5px;background: slateblue;
+.bar{width: 200px;height: 5px;background: purple;
     position: relative;left: calc( 200px * 0);transition: 0.3s;}
 
 .visual{height: 200px;background: orange;}

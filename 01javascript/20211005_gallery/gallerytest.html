@@ -11,8 +11,61 @@
         #gallery{width: 824px;margin: 0 auto; background: pink;}
         #image{width: 760px;margin: 0 auto;}
 #image p{display: none;}
-.container>ul{width: 760px;}
-    </style>
+
+#thumbnail{width: 824px;background: gray; height: 95px;}
+#thumbnail div{float: left;}
+
+#thumbnail .left, #thumbnail .right{
+    width: 32px;height: 95px;cursor: pointer;
+    display: flex;justify-content: center;align-items: center;}
+ #thumbnail .container{width: 760px;height: 95px;overflow: hidden;}   
+ .container ul{width: calc(760px * 3);position: relative;left:calc(-760px * 0)}
+ .container>ul> li{float: left;margin-right: 8px;_padding-top: 10px;}
+ .mr0{margin-right: 0 !important; }
+</style>
+
+<script>
+
+    $(document).ready(function(){
+        $("#thumbnail li").click(function(){
+            let num = $(this).index();
+            //$("#image>p").hide();
+            $("#image>p").hide( ).eq(num).show()
+        });
+
+    let current = 0; 
+    $(".right").click(function(){
+        current++; //current=current + 1
+        if(current > 2){current = 2 ; }
+        // if(current == 3){current = 2 ; }
+        // if(current == 3){current = 0 ; }
+        imgMove();
+       // console.log(current);
+    });
+    $(".left").click(function(){
+        current--; //current=current -1
+
+        if(current < 0 ){current = 0 ; }
+
+        imgMove();
+        // $(".container>ul").css("left",-760*current)
+        // $(".container>ul").stop().animate({left:-760*current},1000,"linear")
+        // console.log(current);
+    });
+
+    function imgMove(){
+     // $(".container>ul").css("left", `-760*${current}px`)
+    // $(".container>ul").css("left",-760*current)
+        $(".container>ul").stop().animate({left:-760*current},1000,"linear")
+    }
+});
+</script>
+
+
+
+
+
+
 </head>
 <body>
     <div id="gallery">
@@ -35,38 +88,40 @@
             <p><img src="images/15.jpg" alt="img15"></p>
             <p><img src="images/16.jpg" alt="img16"></p>
             <p><img src="images/17.jpg" alt="img17"></p>
-            <p><img src="images/18.jpg" alt="img18"></p>
+         
         </div>
-    </div>
-    <div id="thumbnail clearfix">
+   
+    <div id="thumbnail" class="clearfix">
         <div class="left"><img src="images/btn_left.gif" alt=""></div>
         <div class="container">
             <ul class="clearfix">
             <!-- li*18>img[src="images/thumb$.jpg"][alt="thumb$"] -->
-            <li><img src="images/thumb1.jpg" alt="thumb1"></li>
-            <li><img src="images/thumb2.jpg" alt="thumb2"></li>
+            <li><img src="images/thumb0.jpg" alt="thumb0">0</li>
+            <li><img src="images/thumb1.jpg" alt="thumb1">1</li>
+            <li><img src="images/thumb2.jpg" alt="thumb2">2</li>
             <li><img src="images/thumb3.jpg" alt="thumb3"></li>
             <li><img src="images/thumb4.jpg" alt="thumb4"></li>
-            <li><img src="images/thumb5.jpg" alt="thumb5"></li>
-            <li><img src="images/thumb6.jpg" alt="thumb6"></li>
-            <li><img src="images/thumb7.jpg" alt="thumb7"></li>
+            <li class="mr0"><img src="images/thumb5.jpg" alt="thumb5"></li>
+            <li><img src="images/thumb6.jpg" alt="thumb6">6</li>
+            <li><img src="images/thumb7.jpg" alt="thumb7">7</li>
             <li><img src="images/thumb8.jpg" alt="thumb8"></li>
             <li><img src="images/thumb9.jpg" alt="thumb9"></li>
             <li><img src="images/thumb10.jpg" alt="thumb10"></li>
-            <li><img src="images/thumb11.jpg" alt="thumb11"></li>
-            <li><img src="images/thumb12.jpg" alt="thumb12"></li>
+            <li class="mr0"><img src="images/thumb11.jpg" alt="thumb11"></li>
+            <li><img src="images/thumb12.jpg" alt="thumb12">12</li>
             <li><img src="images/thumb13.jpg" alt="thumb13"></li>
             <li><img src="images/thumb14.jpg" alt="thumb14"></li>
             <li><img src="images/thumb15.jpg" alt="thumb15"></li>
             <li><img src="images/thumb16.jpg" alt="thumb16"></li>
-            <li><img src="images/thumb17.jpg" alt="thumb17"></li>
-            <li><img src="images/thumb18.jpg" alt="thumb18"></li>
+            <li class="mr0"><img src="images/thumb17.jpg" alt="thumb17"></li>
+          
             
             </ul>
         </div>
         <div class="right"><img src="images/btn_right.gif" alt=""></div>
 
     </div>
+
 
 </body>
 </html>

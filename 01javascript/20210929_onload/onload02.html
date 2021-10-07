@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>929 onload02</title>
 </head>
-<body>
+<!-- <body>
    <img src="../images/testimg.jpg" alt="" class="img">
    <button class="chagne">이미지변경</button>
    
    <script>
        const img = document.querySelector(".img");
+
        img.onload = function(){
         console.log(img.width)
        };
@@ -20,5 +21,25 @@
        }
        
    </script>
+</body> -->
+<body>
+    <img src="../images/testimg.jpg" alt="" class="img">
+
+    <button class="change">이미지변경</button>
+
+    <script>
+       const img =  document.querySelector(".img");
+
+       img.onload = function(){
+        console.log(img.width)
+       };
+
+       document.querySelector(".change").onclick = function(){
+        img.src = '../images/banana.png'
+       }
+       
+    </script>
+
+    
 </body>
 </html>

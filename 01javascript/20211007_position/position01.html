@@ -23,16 +23,41 @@
     <script>
         $(document).ready(function(){
             const car=$(".car")
-            const carPos = car.position();
-            const carOff = car.offset()
+            const carPos = car.position(); //지역좌표
+            const carOff = car.offset()     //전역좌표
             $(".carSize").html(`${car.width()}px, ${car.height()}px ` );
             $(".carPos").html(`x=${carPos.left}px,y=${carPos.top}px  ` );
             $(".carOff").html(`x=${carOff.left}px,y=${carOff.top}px  ` );
             
-            const bWidth = $("body").width();
-            if(bWidth < 1000){
+            let bWidth = $("body").width();
+              console.log(bWidth)
+            
+
+             function wView(){ 
+              if(bWidth < 1000){
                 $("body").css("background-color","pink")
+            }else{
+                $("body").css("background-color","initial")
             }
+        }
+             
+        wView();//문서시작시시작
+
+
+                // $(window).resize(function(){ });
+                //window.onresize = funtion(){}
+                //window.addEventListener("resize",function(){})
+
+          $(window).resize(function(){ 
+                bWidth = $("body").width();
+                console.log(bWidth)
+
+                wView() //리사이즈시시작
+
+                });
+
+
+
         });
     </script>
 

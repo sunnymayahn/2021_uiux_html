@@ -76,31 +76,51 @@
 
     //3rd hash this.hash
     $(".menu>a").click(function(e){
-       e.preventDefault();
-        let target = $(this.hash);
-        let st = target.offset().top;
+       e.preventDefault();//기본 에이태그 경로 막아줌 
+        let target = $(this.hash); //디스의 해시를 타겟에 담아서 
+        let st = target.offset().top; //타겟의 오프셋 톱값으로 이동 
         
 
         // $(".menu>a").removeClass();
         // $(this).addClass("on")
 
         console.log(st)
-        $("html,body").animate({scrollTop:st},300)
+        $("html,body").animate({scrollTop:st},300) //타겟의 오프셋 톱값으로 이동 
 
     });
 
     $(window).scroll(function(){
         let scrollY = $(window).scrollTop();
-        if(scrollY >= $(".scene").eq(0).offset().top){
-            $(".menu>a").removeClass().eq(0).addClass("on");
-          }
-          if(scrollY >= $(".scene").eq(1).offset().top){
-            $(".menu>a").removeClass().eq(1).addClass("on");
-          }
-          if(scrollY >= $(".scene").eq(2).offset().top){
-            $(".menu>a").removeClass().eq(2).addClass("on");
-          }
-      
+
+            // 1번   
+        // if(scrollY >= $(".scene").eq(0).offset().top){
+        //     $(".menu>a").removeClass().eq(0).addClass("on");
+        //   }
+        //   if(scrollY >= $(".scene").eq(1).offset().top){
+        //     $(".menu>a").removeClass().eq(1).addClass("on");
+        //   }
+        //   if(scrollY >= $(".scene").eq(2).offset().top){
+        //     $(".menu>a").removeClass().eq(2).addClass("on");
+        //   }
+            
+            // 2번            
+        // for(let i = 0 ; i<$(".scene").length; i++){
+        //     if(scrollY >= $(".scene").eq(i).offset().top){
+        //      $(".menu>a").removeClass().eq(i).addClass("on");
+        //     }
+        //    }
+
+      // 3번  $(selector).each()
+        $(".scene").each(function(index){
+            if(scrollY >= $(this).offset().top){
+                $(".menu>a").removeClass().eq(index).addClass("on")
+            }
+
+        });
+
+
+
+
     });
 
 });

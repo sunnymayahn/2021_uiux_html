@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1015 video 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        body{height: 400vh;}
+
+        .menu{background: skyblue;width: 100%; position: absolute;top: 30px; z-index: 1; }
+        .menu ul{width: 1000px; height: 50px; margin: 0 auto;
+            display: flex;justify-content: space-between;
+        }
+        .menu ul li{width: 20%;background: orange;_height: 50px;
+                    display: flex;align-items: center;justify-content: center;}
+        #myVideo{
+            position: absolute;
+            width: 100%;height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+    </nav>
+    <video id = "myVideo" autoplay muted loop>
+        <source src="video/o_big_intro.mp4" type="video/mp4">
+       </video>
+    <!-- <video src="video/o_big_intro.mp4" width="1920" height="1080"></video> -->
+
+
+
+    
+</body>
+</html>

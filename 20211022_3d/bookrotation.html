@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 1022 3d book rotation</title>
+    <style>
+    .box{position: absolute;
+        width: 336x;height: 436px;
+        left: 50%;top: 50%;transform: translate(-50%,-50%);
+        perspective: 1000px;
+    }
+    .cube{
+        position: absolute;
+        width: 100%;height: 100%;left: 0;top: 0; 
+        transform-style: preserve-3d;
+        _transform: rotateX(328deg) rotateY(30deg) translateZ(150px);
+        transition: 0.3s;
+    }
+    .box:hover .cube{transform: rotateX(20deg) rotateY(40deg) 
+        translateZ(150px);
+    }
+
+    .face{width: 100%;height: 100%;position: absolute;}   
+    .face-left{transform: rotateY(-90deg) translate3d(-20px,0,0 )    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cube">
+            <div class="face face-front"><img src="img/bk1.png" alt=""></div>
+          
+            <div class="face face-left"><img src="img/bk2.png" alt=""></div>
+            
+        </div>
+    </div>
+</body>
+</html>

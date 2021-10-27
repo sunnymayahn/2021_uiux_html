@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1027 circle</title>
+<style>
+    body{overflow-x: hidden ;}
+    .wrap{position: absolute;width: 300px;height: 100px;
+    background: skyblue;
+    animation: move 3s linear forwards;
+     top: 300px;left: 0;}
+
+    .wrap.on{animation: move 3s linear forwards; } 
+
+    @keyframes move{
+        to{left: 50%;}
+    }
+    .circle{
+        width: 100px;height: 100px;border-radius: 50px;
+        border: 10px solid #000;box-sizing: border-box;
+        position: absolute;
+        /* left: 100px;top: 500px; */
+        animation: cir1st 0.5s linear infinite forwards; 
+    }
+
+    .left{left: 0;}
+    .right{right: 0;}
+
+    @keyframes cir1st{
+        from{transform: rotate(0);}
+        to{transform: rotate(360deg);}
+      
+    }
+    .circle:after{content: "";display: block;width: 100%;
+    height: 1px;background: #333;position: absolute;
+    top: 50%;transform: translateY(-50%);}
+
+    .circle:before{content: "";display: block;width: 100%;
+    height: 1px;background: #333;position: absolute;
+    top: 50%;transform: translateY(-50%) rotate(90deg);}
+</style>
+
+
+</head>
+<body>
+   <div class="wrap">
+       <div class="circle left"></div>
+       <div class="circle right"></div>
+
+
+   </div>
+   <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae soluta iure, itaque quaerat nesciunt illo debitis iusto optio, temporibus voluptas, vero sint. Consectetur impedit rerum ducimus recusandae veniam! Similique quas non rerum ipsa sed quo dicta a minus fuga blanditiis eaque incidunt nihil, saepe ab aliquid numquam exercitationem iusto maxime eum soluta. Voluptas ea atque, veniam nesciunt eligendi temporibus fugiat recusandae eveniet officia fugit laboriosam maiores perferendis natus iste eius totam mollitia cupiditate! Tempore reiciendis excepturi id amet, officia commodi sunt, dolorem nesciunt expedita aliquid, suscipit eveniet corporis animi accusamus consequatur dicta dolores necessitatibus nemo labore. Mollitia ullam, vel accusantium distinctio officia doloremque voluptatibus illo ab quidem, facilis delectus tempore? Nam nemo eos asperiores ab hic tenetur similique officia iusto delectus at! Voluptatum qui perferendis veniam eos. Sint assumenda natus in dolorum ratione minus et obcaecati, officiis soluta doloremque aliquid nemo similique laudantium incidunt vitae debitis voluptatem? Incidunt dolore perferendis unde, iste libero harum quaerat enim sequi temporibus rem, ex explicabo error facilis? Quis, molestiae voluptas, suscipit fugit tempore nam nihil ab culpa voluptatum quam nesciunt dolore! Assumenda distinctio, quod, optio totam aperiam impedit esse consequatur dolore ipsa qui reprehenderit similique magni ex labore blanditiis. Doloribus ratione sapiente non cumque eius minima laborum cum, rem qui cupiditate ipsa accusantium officia et, possimus est quo sint impedit nobis ipsum nemo repellat! Ex ipsa iure sunt? Et amet laudantium omnis facilis quae placeat qui quam soluta quos doloremque eligendi repellat, dolorem ipsum inventore? Veniam officia eveniet voluptatem impedit temporibus eligendi atque placeat suscipit, iusto animi nemo recusandae. Magnam, ab molestiae corrupti odit alias accusantium ducimus iure ipsum nobis molestias, ex dolor atque praesentium quidem, pariatur cupiditate repellendus! Quo mollitia, consequuntur soluta assumenda at, rem quasi excepturi tempora similique amet odio sed fugit accusantium possimus doloribus quos enim. Unde nostrum aliquam quidem?</div>
+
+<script>
+    window.addEventListener("scroll",function(){
+        let scrollY=window.pageYOffset;
+        console.log(scrollY)
+        if(scrollY > 200){
+            document.querySelector(".wrap").classList.add("on")
+        }else{
+            document.querySelector(".wrap").classList.remove("on") 
+        }
+    })
+
+    // $(window).scroll(function(){
+    //     if($(window).scrollTop()>200){
+    //     $(".wrap").addClass("on")
+    // }else{
+    //     $(".wrap").removeClass("on") 
+    //     }
+    // })
+</script>
+</body>
+</html>

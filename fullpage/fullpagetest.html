@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1026 fullpage01</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <style>
+        html,body{height: 100vh;}
+        h2{color: rgb(194, 3, 98);}
+        .section{
+            background-repeat: no-repeat; 
+            background-position:center;
+            background-size: cover;
+            text-align: center; 
+            _font-size: 2em;
+        }
+
+        .section.page1{background-image: url(images/bg1.jpg);}
+        .section.page2{background-image: url(images/bg2.jpg);}
+        .section.page3{background-image: url(images/page3.jpg);}
+        .section.page4{background-image: url(images/bg4.jpg);}
+
+     
+
+        .section .view01{transform: translateY(-60vh);transition: 0.6s;}
+        .section .view01.on{transform: translateY(0);}
+
+        .section .view02{transform: translateX(-100vw);transition: 0.6s;}
+        .section .view02.on{transform: translateX(0);}
+
+
+        .section .view03{transform: translateY(-200px);_transition: 0.6s;}
+        /* .section .view02.on{transform: translateY(0);} */
+
+
+        .scrollBtn{position: absolute;bottom: 20px;left: 50%;
+                 transform: translateX(-50%);
+                animation: xScroll 0.8s infinite alternate;}
+
+    
+        @keyframes xScroll{
+            to{bottom: 50px;}
+        }
+
+
+
+        @media screen and (max-width:765px){
+
+            .section .view03{transform: translateY(0px)}
+            .scrollBtn{_display: none;}      
+            
+        }
+
+
+        #myVideo{
+            position: absolute;left: 0;top: 0;
+            width: 100%;height: 100%;
+            object-fit: cover;}
+    </style>
+       <script>
+        $(function(){
+            $("#fullpage").fullpage({    
+                menu:".navbar-nav",
+                anchors:  ["m1st","m2st","m3st","m4st"],
+                navigation:true,
+                navigationPosition:'fp-right',
+                responsiveWidth:768,
+                navigationTooltips: ['First', 'Second','Third',"Fourth"],
+                afterLoad:function(anchorLink,index){
+                    console.log(anchorLink+','+index)
+
+                    if(index == 1){
+                        $(".view01").addClass("on")
+
+                    }else{
+                        $(".view01").removeClass("on")
+                    }
+
+                    if(index == 2){
+                        $(".view02").addClass("on")
+
+                    }else{
+                        $(".view02").removeClass("on")
+                    }
+
+
+                    }
+              })
+          })
+    </script>
+
+   
+</head>
+<body>
+
+    
+   
+              <nav class="navbar  navbar-expand-md navbar-dark bg-dark fixed-top">
+                  <a class="navbar-brand" href="#"> <h2>yanolja</h2> </a>
+                  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavId">
+                      <ul class="navbar-nav ml-auto mt-2 mt-0">
+                          <li class="nav-item _active">
+                              <a class="nav-link"  data-menuanchor="m1st" href="#m1st">ABOUT</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link"  data-menuanchor="m1st" href="#m2st">SERVICE</a>
+                          </li> 
+                          <li class="nav-item">
+                              <a class="nav-link"  data-menuanchor="m1st" href="#m3st">STORY</a>
+                          </li> 
+                          <li class="nav-item">
+                              <a class="nav-link"  data-menuanchor="m1st" href="#m4st">NEWSROOM</a>
+                          </li> 
+                        
+
+
+                      </ul>
+          
+                  </div>
+              </nav>
+    
+
+
+    
+    <div id="fullpage">
+    
+     
+        <div class="section page1" data-anchor="m1st">
+            <video autoplay muted data-autoplay id="myVideo">
+                <source src="../images/sample01.mp4">
+            </video>
+            <div class="container _bg-info text-white text-md-right view01"><h3>누구나 <br> 마음 편히 <br>놀수있게</h3> </div>
+            <div class="scrollBtn">
+                <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a></div>
+            </div>
+            <div class="section page2" data-anchor="m2st">
+                <div class="container bg-primary view02">test2</div></div>
+            <div class="section page3" data-anchor="m3st">
+                <div class="container view03">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-8 text-left">
+                            <h2>lorem</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia eum repudiandae aliquam commodi autem tempora? Illum possimus sequi inventore.</p> </div>
+                            <a href="#!" class="btn bn-primary">MORE</a>
+                            </div>
+                </div> </div>
+            <div class="section page4" data-anchor="m4st">
+                <div class="slide"> Slide 1 </div>
+                <div class="slide"> Slide 2 </div>
+                <div class="slide"> Slide 3 </div>
+                <div class="slide"> Slide 4 </div>
+                </div>
+            
+            <div class="section fp-auto-height">
+            <div class="myContent">
+                <div class="intro footer">
+                    <h1>My footer</h1>
+                    <p>This could be my footer.</p>
+                </div>
+            </div>
+        </div>
+
+  
+        <div class="visualWrap">
+            <div class="container py-5">
+                <div class="row">
+        
+                    <!-- <div class="col-md-06 col-lg-4 d-flex flex-column justify-content-center align-items-center"> -->
+                    <div class="col-md-6 col-lg-4 align-self-center mb-5 mb-md-0">
+                        <h2 class="text-center text-md-left">Lorem ipsum dolor sit.</h2>
+                        <p class="text-center text-md-left">Lorem ipsum dolor sit amet.</p>
+                        <a href="#!" class="btn btn-primary d-block d-md-inline mb-2 mb-md-0">MORE</a>
+                        <a href="#!" class= "btn btn-outline-primary d-block d-md-inline">EMAIL</a>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-8">
+                        <img src="assets/slider.svg" alt="" class="img-fluid">
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="content">
+            <div class="container py-5 px-5 px-md-0">
+        
+           
+            <div class="row">
+                <div class="col-md-6 order-md-1 order-2">
+                    <img src="assets/sobre.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6  order-md-2 order-1 mb-5 mb-md-0 align-self-center" >
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, quo.</h4>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut labore deserunt ut quasi sapiente impedit quia assumenda non consectetur officia.</p>
+                <a href="#!" class="btn button-primary text-white d-block d-md-inline px-5">ENTER CONTACT</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <footer class="footer pt-5">
+            <div class="container py-3">
+                <div class="row _px-2 px-md-0">
+                    <div class="col-lg-5  text-center text-md-left mb-3 mb-sm-5">
+                        <a href="index.html"><img src="images/logowhite.png" alt=""></a>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <h6>SERVICE</h6>
+                        <ul>
+                            <li><a href="#!">서비스소개</a></li>
+                            <li><a href="#!">공지사항</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <h6>MASTER</h6>
+                        <ul>
+                            <li><a href="#!">마스터소개</a></li>
+                            <li><a href="#!">마스터지원</a></li>
+        
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <h6>B2B</h6>
+                        <ul>
+                            <li><a href="#!">기업교육문의</a></li>
+                            <li><a href="#!">제휴문의</a></li>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <h6>CUSTOMER</h6>
+                        <ul>
+                            <li><a href="#!">고객센터</a></li>
+                            <li><a href="#!">문의하기</a></li>
+                         
+                        </ul>
+                    </div>
+                   
+                </div>
+                
+                
+               <hr style="background: rgb(27, 54, 88);">
+               <div class="row py-3 _pb-3">
+                   <div class="col-md-6 mb-2">
+                       <ul class="nav justify-content-center justify-content-md-start">
+                           <li class="nav-item"><a href="#!">Privacy</a></li>
+                           <li class="nav-item px-2">|</li>
+                           <li class="nav-item"><a href="#!">Terms</a></li>
+                           <li class="nav-item px-2">|</li>
+                           <li class="nav-item"><a href="#!">Site-map</a></li>
+                           
+                        </ul>
+                   </div>
+                   <div class="col-md-6 ">
+                    <ul class="nav justify-content-center justify-content-md-end _bg-info">
+                        <li class="nav-item px-2"><a href="#!"><i class="fab fa-facebook-f"></i> </a></li>
+                        <li class="nav-item px-2"><a href="#!"><i class="fab fa-google"></i> </a></li>
+                        <li class="nav-item px-2"><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                        <li class="nav-item px-2 "><a href="#!"><i class="fab fa-github"></i> </a></li>
+                     
+                     </ul>
+                    </div>
+                    
+                </div>
+        
+        
+                <div class="address _text-md-left mb-5 pt-3" _style="border-top:1px solid #ccc ;">
+                    <b>(주)휴넷</b> 대표이사 조영탁<br>
+                    사업자등록번호 : 214-86-38356 통신판매업신고 : 제2008-서울구로-0308  사업자정보확인 ><br>
+                    (08389) 서울시 구로구 디지털로 26길 5(구로3동 235-2) 에이스하이엔드타워 1차 8층| FAX : 02-6220-2581 <br>
+                    ©hunet. All right Reserved.
+                </div>
+               
+            </div>
+        </footer>
+
+     
+    
+
+</div>
+
+
+</body>
+</html>

@@ -7,22 +7,24 @@
     <title>1027 woman</title>
     <style>
         body{background: #aaa;}
-        .man {position: absolute;left: 200px;}
+        .man {position: absolute;left: 200px;
+            animation: bounce 0.7s infinite alternate;
+            background: #000;}
         .man div{position: absolute;}
         .man div.body{z-index: 2;}
         .man div.arm1{
-            top: 120px;left: -20px;z-index: 4;
-            transform-origin: 86px 21px;
+            top: 110px;left: -20px;z-index: 4;
+            transform-origin: 80px 21px;
             transform: rotate(20deg);
             animation: armR 0.7s linear infinite alternate;
             }
         .man div.arm2{top: 120px;left: -20px;
-            transform-origin: 86px 21px;
+            transform-origin: 80px 21px;
             transform: rotate(-60deg);
             animation: armL 0.7s linear infinite alternate;}
 
        .man div.foot1{
-            top: 200px;left: -5px;z-index: 3;
+            top: 200px;left: -10px;z-index: 3;
             transform-origin: 40px 46px;
             transform: rotate(-10deg);
             animation: footR 0.7s linear infinite alternate;
